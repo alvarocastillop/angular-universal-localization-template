@@ -1,0 +1,11 @@
+/* Customizations to the designer theme should be defined here */
+@import '../extensions';
+@import '../variables';
+
+.width-content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $maxContentWidth;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

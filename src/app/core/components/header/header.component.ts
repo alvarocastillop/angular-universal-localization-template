@@ -4,15 +4,13 @@ import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/ro
 import { filter } from 'rxjs/operators';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgFor } from '@angular/common';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone: true,
-  imports: [RouterLink, CollapseModule, RouterLinkActive, BsDropdownModule, NgFor, TranslateModule, LocalizeRouterModule],
+  imports: [RouterLink, RouterLinkActive, NgFor, TranslateModule, LocalizeRouterModule],
 })
 export class HeaderComponent {
   private readonly localizeRouterService = inject(LocalizeRouterService);

@@ -1,0 +1,4 @@
+// Configuration for the font-face of the theme, defaults to the system font so left as blank
+*:not(i) {
+  font-family: var(--font-family);
+}

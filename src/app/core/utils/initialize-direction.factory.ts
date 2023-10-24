@@ -15,7 +15,7 @@ class InitializeDirectionService {
 
   initializeDirection() {
     this.translateService.stream('DIR').subscribe(dir => {
-      this.directionChanged(dir);
+      //this.directionChanged(dir);
     });
   }
 

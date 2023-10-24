@@ -30,15 +30,10 @@
               "src/assets"
             ],
             "styles": [
-              {
-                "input": "node_modules/bootstrap/dist/css/bootstrap.rtl.min.css",
-                "inject": false
-              },
-              {
-                "input": "node_modules/bootstrap/dist/css/bootstrap.min.css",
-                "inject": false
-              },
-              "src/styles.scss"
+              "src/styles/reset.scss",
+              "node_modules/primeflex/primeflex.css",
+              "src/styles/styles.scss",
+              "node_modules/primeng/resources/primeng.css"
             ],
             "scripts": [],
             "vendorChunk": true,
@@ -108,8 +103,10 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.scss"
+              "src/styles/reset.scss",
+              "node_modules/primeflex/primeflex.css",
+              "src/styles/styles.scss",
+              "node_modules/primeng/resources/primeng.css"
             ],
             "scripts": []
           }
