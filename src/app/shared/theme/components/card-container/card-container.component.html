@@ -1,0 +1,10 @@
+<section [ngStyle]="{marginTop, backgroundColor, backgroundImage }" class="p-5 flex flex-column gap-5 border-round-2xl">
+    <div id="header" class="flex flex-column gap-2 w-full" *ngIf="title">
+        <p class="text-xl text-gray-900 font-bold">{{ title }}</p>
+        <small class="text-sm text-gray-500">{{ subtitle }}</small>
+    </div>
+    <div>
+        <ng-content></ng-content>
+    </div>
+</section>
+
