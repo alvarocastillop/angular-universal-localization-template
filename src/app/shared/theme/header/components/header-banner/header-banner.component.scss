@@ -1,0 +1,16 @@
+@import 'src/styles/styles';
+
+div#content {
+  width: 100%;
+  max-width: $maxContentWidth;
+
+  a {
+    i {
+      transition: margin-left .2s;
+    }
+
+    &:hover i {
+      margin-left: .5em;
+    }
+  }
+}

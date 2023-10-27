@@ -1,0 +1,9 @@
+{
+  "locales": [
+    "en",
+    "fr",
+    "ar"
+  ],
+  "prefix": "ROUTES.",
+  "defaultLocale": "en"
+}

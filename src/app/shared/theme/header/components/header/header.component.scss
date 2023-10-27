@@ -1,0 +1,21 @@
+@import 'src/styles/styles';
+
+#header {
+  z-index: 2;
+}
+
+div#container {
+  background-color: rgba(#fff, .8);
+  backdrop-filter: blur(10px);
+}
+
+div#content {
+  max-width: $maxContentWidth;
+  margin: 0 auto;
+}
+
+div#content-menu {
+  &.open {
+    display: block !important;
+  }
+}

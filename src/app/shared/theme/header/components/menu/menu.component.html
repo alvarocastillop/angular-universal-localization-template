@@ -1,0 +1,33 @@
+<div id="content">
+    <ul id="menu" class="border-round list-none px-5 lg:px-0 p-0 m-0 gap-4 align-items-center lg:flex flex-column lg:flex-row mt-5 lg:mt-0 left-0 w-full">
+        <li>
+            <a class="p-element flex gap-1 px-3 no-underline p-3 align-items-center text-700 font-medium border-round cursor-pointer transition-colors transition-duration-150" [routerLink]="'/' | localize" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <span>{{ 'home' | translate }}</span>
+            </a>
+        </li>
+        <li class="lg:relative">
+            <a class="p-element p-ripple flex gap-1 px-3 no-underline p-3 align-items-center text-700 font-medium border-round cursor-pointer transition-colors transition-duration-150" href="javascript:">
+                <span>Services</span>
+                <i class="pi pi-angle-down ml-auto lg:ml-3"></i>
+            </a>
+            <ul class="list-none py-0 px-6 m-0 lg:px-0 border-round shadow-0 lg:shadow-2 lg:border-1 border-50 lg:absolute surface-overlay hidden origin-top w-full lg:w-auto cursor-pointer">
+                <li>
+                    <a [routerLink]="'/' | localize" class="p-ripple p-element no-underline flex gap-1 p-3 px-5 align-items-center text-600 transition-colors transition-duration-150">
+                        <span class="font-medium" style="white-space: nowrap">Service 1</span>
+                        <span class="p-ink"></span></a>
+                </li>
+                <li>
+                    <a [routerLink]="'/' | localize" class="p-ripple p-element no-underline flex gap-1 p-3 px-5 align-items-center text-600 transition-colors transition-duration-150">
+                        <span class="font-medium" style="white-space: nowrap">Service 2</span>
+                        <span class="p-ink"></span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="p-element flex gap-1 px-3 no-underline p-3 align-items-center text-700 font-medium border-round cursor-pointer transition-colors transition-duration-150" [routerLink]="'/contact' | localize" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <span>{{ 'contact' | translate }}</span>
+            </a>
+        </li>
+    </ul>
+</div>

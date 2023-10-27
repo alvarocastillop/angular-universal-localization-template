@@ -1,0 +1,16 @@
+<div class="flex gap-4 align-items-start lg:align-items-center flex-column lg:flex-row left-0 pl-6 lg:pl-0 pt-3 lg:pt-0 w-full">
+    <a href="#">
+        <p-button label="call to action" icon="pi pi-arrow-right" iconPos="right"></p-button>
+    </a>
+    <ul class="flex gap-2">
+        <li *ngFor="let locale of locales">
+            <a
+                    class="text-black-alpha-60 no-underline hover:underline"
+                    queryParamsHandling="merge"
+                    routerLink="/{{locale}}/{{currentUrl}}"
+                    routerLinkActive="text-black-alpha-90">
+                {{locale}}
+            </a>
+        </li>
+    </ul>
+</div>

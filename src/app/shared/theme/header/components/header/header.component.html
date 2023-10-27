@@ -1,0 +1,17 @@
+<div id="header" class="w-full border-bottom-1 border-gray-300">
+    <app-header-banner></app-header-banner>
+    <div id="container" class="py-3">
+        <div id="content" class="px-3 flex align-items-center justify-content-between relative lg:static gap-8">
+            <div>
+                <app-logo></app-logo>
+            </div>
+            <div class="flex-grow-1 w-max flex justify-content-end lg:justify-content-between align-items-center">
+                <i class="pi pi-bars text-3xl block lg:hidden" (click)="openMenu()"></i>
+                <div #contentMenu id="content-menu" class="hidden lg:flex absolute lg:relative top-100 left-0 w-full flex-column lg:flex-row surface-100 lg:bg-transparent justify-content-between align-items-center border-bottom-1 border-gray-300 lg:border-bottom-none pb-4 lg:pb-0">
+                    <app-menu></app-menu>
+                    <app-header-tools></app-header-tools>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

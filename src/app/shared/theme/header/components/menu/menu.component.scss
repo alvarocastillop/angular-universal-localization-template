@@ -1,0 +1,14 @@
+@import 'src/styles/theme/saga/variables';
+
+ul#menu > li:hover > ul {
+  display: block !important;
+}
+
+a:hover, a.active {
+  background-color: rgba($shade150, .8) !important;
+  backdrop-filter: blur(10px);
+
+  span, i {
+    color: black;
+  }
+}
