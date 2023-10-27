@@ -1,0 +1,19 @@
+<footer class="bg-black-alpha-90">
+    <div class="flex px-4 py-4 justify-content-between flex-column lg:flex-row align-items-center gap-4">
+        <div>
+            <p class="text-gray-600 text-white">Copyright {{ year }}. All rights reserved.</p>
+        </div>
+        <div>
+            <ul class="flex gap-4 justify-content-center">
+                <li *ngFor="let socialNetwork of socialNetworks">
+                    <a [href]="socialNetwork.url" class="text-gray-600 no-underline hover:underline hover:text-gray-800 transition-colors transition-duration-150">
+                        <i class="{{ socialNetwork.icon }} text-xl text-white"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex justify-content-end">
+            <app-footer-menu></app-footer-menu>
+        </div>
+    </div>
+</footer>
