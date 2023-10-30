@@ -10,6 +10,7 @@ import { provideRouter, withDisabledInitialNavigation } from '@angular/router';
 import {initializeDirectionFactory} from "./shared/internationalization/utils/initialize-direction.factory";
 import {localizeBrowserLoaderFactory} from "./shared/internationalization/utils/localize-browser.loader";
 import {translateBrowserLoaderFactory} from "./shared/internationalization/utils/translate-browser.loader";
+import locales from 'src/assets/i18n/locales.json';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,7 +18,7 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     importProvidersFrom(
       TranslateModule.forRoot({
-        defaultLanguage: 'en',
+        defaultLanguage: locales.defaultLocale,
         loader: {
           provide: TranslateLoader,
           useFactory: translateBrowserLoaderFactory,
