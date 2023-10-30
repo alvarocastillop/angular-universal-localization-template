@@ -5,4 +5,10 @@ export const environment = {
   googleTagManager: {
     id: '',
   },
+  addresses: [
+    { address: 'Calle José de cabo palomares 37 03008, Alicante (Spain)', googleMapsUrl: '' },
+    { address: 'Calle José de cabo palomares 37 03008, Alicante (Spain)', googleMapsUrl: '' },
+  ],
+  emails: ["info@dicopgroup.com"],
+  phones: ["+34 965 12 34 56"],
 };

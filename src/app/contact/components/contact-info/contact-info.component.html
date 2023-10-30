@@ -1,0 +1,23 @@
+<div class="flex flex-column gap-6">
+    <div *ngIf="addresses.length">
+        <p class="text-xl font-bold mb-5">Address</p>
+        <div *ngFor="let address of addresses" class="flex gap-3 mt-3">
+            <i class="pi pi-map-marker"></i>
+            <a [href]="address.googleMapsUrl" target="_blank" class="line-height-2 font-medium text-gray-600 no-underline hover:text-black-alpha-90 transition-colors transition-duration-150">{{ address.address }}</a>
+        </div>
+    </div>
+    <div *ngIf="emails.length">
+        <p class="text-xl font-bold mb-5">Email</p>
+        <div *ngFor="let email of emails" class="flex gap-3 mt-3">
+            <i class="pi pi-send"></i>
+            <a [href]="'mailto:' + email" class="font-medium text-gray-600 no-underline hover:text-black-alpha-90 transition-colors transition-duration-150">{{ email }}</a>
+        </div>
+    </div>
+    <div *ngIf="phones.length">
+        <p class="text-xl font-bold mb-5">Phone</p>
+        <div *ngFor="let phone of phones" class="flex gap-3 mt-3">
+            <i class="pi pi-phone"></i>
+            <a [href]="'tel:' + phone" class="font-medium text-gray-600 no-underline hover:text-black-alpha-90 transition-colors transition-duration-150">{{ phone }}</a>
+        </div>
+    </div>
+</div>

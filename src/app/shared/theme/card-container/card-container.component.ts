@@ -18,7 +18,7 @@ export class CardContainerComponent {
     this._backgroundImage = value
   }
 
-  private _backgroundImage: string = 'none'
+  private _backgroundImage: string = ''
 
   public get backgroundImage(): string {
     return `url(${this._backgroundImage})`
