@@ -1,0 +1,9 @@
+<div id="container" class="fixed z-5 bottom-0 left-0 w-full p-3 flex justify-content-center" *ngIf="showCookiesPopup">
+    <div class="bg-primary w-fit pr-2 pl-4 pt-2 pb-2  border-round-xl flex flex-column md:flex-row justify-content-center gap-3 md:gap-6 align-items-center shadow-5">
+        <p class="text-white text-background-color p-0 m-0 text-center md:text-left">This website uses cookies to enhance your browsing experience.</p>
+        <div class="flex flex-column md:flex-row justify-content-center gap-3">
+            <p-button styleClass="bg-white text-black-alpha-90" (click)="reject()">Just essentials</p-button>
+            <p-button styleClass="bg-white text-black-alpha-90" (click)="accept()">Accept cookies</p-button>
+        </div>
+    </div>
+</div>

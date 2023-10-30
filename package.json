@@ -29,6 +29,7 @@
     "@nguniversal/express-engine": "^16.2.0",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
+    "angular-google-tag-manager": "^1.8.0",
     "express": "^4.15.2",
     "primeflex": "^3.3.1",
     "primeicons": "^6.0.1",
