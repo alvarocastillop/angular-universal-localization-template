@@ -23,7 +23,8 @@ export const appConfig: ApplicationConfig = {
           useFactory: translateBrowserLoaderFactory,
           deps: [HttpClient],
         },
-      }), LocalizeRouterModule.forRoot(routes, {
+      }),
+      LocalizeRouterModule.forRoot(routes, {
         parser: {
           provide: LocalizeParser,
           useFactory: localizeBrowserLoaderFactory,
