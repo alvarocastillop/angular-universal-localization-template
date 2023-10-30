@@ -1,0 +1,10 @@
+<div *ngIf="control.control" class="flex flex-column gap-2">
+    <div class="flex align-items-center gap-3">
+        <p-inputSwitch [disabled]="isDisabled" [(ngModel)]="value" (input)="changeValue()"></p-inputSwitch>
+        <div class="flex gap-3">
+            <label>{{ label }}</label>
+            <i *ngIf="tooltip !== null" class="text-gray-500 pi pi-info-circle" [pTooltip]="tooltip" tooltipPosition="right"></i>
+        </div>
+    </div>
+    <p class="text-red-700 text-xs" *ngFor="let errorKey of filteredActiveErrorKeys()">{{ filteredActiveErrors[errorKey] }}</p>
+</div>

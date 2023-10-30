@@ -1,0 +1,10 @@
+<div *ngIf="control.control" class="flex flex-column gap-2">
+    <div class="flex align-items-center gap-3" *ngFor="let option of options">
+        <p-radioButton [disabled]="isDisabled" [inputId]="option[optionValue]" [name]="option" [value]="option" [(ngModel)]="value" (input)="changeValue()"></p-radioButton>
+        <div class="flex gap-3">
+            <label [for]="option[optionValue]">{{ option[optionLabel] }}</label>
+            <i *ngIf="tooltip !== null" class="text-gray-500 pi pi-info-circle" [pTooltip]="tooltip" tooltipPosition="right"></i>
+        </div>
+    </div>
+    <p class="text-red-700 text-xs" *ngFor="let errorKey of filteredActiveErrorKeys()">{{ filteredActiveErrors[errorKey] }}</p>
+</div>

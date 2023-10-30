@@ -1,0 +1,12 @@
+<div *ngIf="control.control" class="flex flex-column gap-2">
+    <div class="w-full flex gap-3">
+        <label>{{ label }}</label>
+        <i *ngIf="tooltip !== null" class="text-gray-500 pi pi-info-circle" [pTooltip]="tooltip" tooltipPosition="right"></i>
+    </div>
+    <span class="p-input-icon-left w-full" *ngIf="inputIcon">
+    <i class="pi" [ngClass]="inputIcon"></i>
+    <p-dropdown class="w-full" [disabled]="isDisabled" [filter]="filter" [filterBy]="optionLabel" [(ngModel)]="value" (input)="changeValue()" [options]="options" [optionLabel]="optionLabel"></p-dropdown>
+  </span>
+    <p-dropdown class="w-full" [disabled]="isDisabled" [filter]="filter" [filterBy]="optionLabel" [(ngModel)]="value" (input)="changeValue()" [options]="options" [optionLabel]="optionLabel"></p-dropdown>
+    <p class="text-red-700 text-xs" *ngFor="let errorKey of filteredActiveErrorKeys()">{{ filteredActiveErrors[errorKey] }}</p>
+</div>
