@@ -16,6 +16,6 @@ export function localizeBrowserLoaderFactory(
     location,
     settings,
     httpClient,
-    `${environment.appUrl}assets/locales.json`,
+    `${environment.appUrl}assets/i18n/locales.json`,
   );
 }
