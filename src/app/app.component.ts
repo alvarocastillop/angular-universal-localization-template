@@ -12,11 +12,12 @@ import {AnalyticsService} from "./shared/analytics/services/analytics.service";
 })
 export class AppComponent implements OnInit {
 
-  public constructor(private analyticsService: AnalyticsService) {
+  public constructor(private analyticsService: AnalyticsService, private internationalizationService: AnalyticsService) {
   }
 
   public ngOnInit(): void {
     this.analyticsService.init()
+    this.internationalizationService.init()
   }
 
 }
