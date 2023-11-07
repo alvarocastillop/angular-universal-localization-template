@@ -6,7 +6,7 @@ import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { LocalizeParser, LocalizeRouterModule, LocalizeRouterSettings } from '@gilsdav/ngx-translate-router';
 import { Location } from '@angular/common';
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { provideRouter, withDisabledInitialNavigation } from '@angular/router';
+import {provideRouter, withDisabledInitialNavigation, withInMemoryScrolling} from '@angular/router';
 import {initializeDirectionFactory} from "./shared/internationalization/utils/initialize-direction.factory";
 import {localizeBrowserLoaderFactory} from "./shared/internationalization/utils/localize-browser.loader";
 import {translateBrowserLoaderFactory} from "./shared/internationalization/utils/translate-browser.loader";
@@ -14,7 +14,13 @@ import locales from 'src/assets/i18n/locales.json';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes, withDisabledInitialNavigation()),
+    provideRouter(
+      routes,
+      withDisabledInitialNavigation(),
+      withInMemoryScrolling({
+        scrollPositionRestoration: 'top',
+        anchorScrolling: 'enabled',
+      })),
     provideClientHydration(),
     importProvidersFrom(
       TranslateModule.forRoot({
