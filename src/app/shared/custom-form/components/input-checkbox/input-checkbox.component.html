@@ -1,6 +1,6 @@
 <div *ngIf="control.control" class="flex flex-column gap-2">
     <div class="w-full flex gap-3">
-        <p-checkbox [disabled]="isDisabled" [inputId]="controlName" [binary]="true" [(ngModel)]="value" (input)="changeValue()"></p-checkbox>
+        <p-checkbox [disabled]="isDisabled" [inputId]="controlName" [binary]="true" [(ngModel)]="value" (onChange)="changeValue()"></p-checkbox>
         <label [for]="controlName">{{ label }}</label>
         <i *ngIf="tooltip !== null" class="text-gray-500 pi pi-info-circle" [pTooltip]="tooltip" tooltipPosition="right"></i>
     </div>
