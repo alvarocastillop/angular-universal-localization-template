@@ -54,7 +54,7 @@ export class BaseCustomFormDirective implements OnInit, OnDestroy, ControlValueA
         for(let controlErrorKey  in this.control.errors) {
           const controlErrorValue = this.control.errors[controlErrorKey]
 
-          if (controlErrorValue) {
+          if (controlErrorValue && this.control.pristine && this.control.touched) {
             this.filteredActiveErrors[controlErrorKey] = (this.errors[controlErrorKey]) ? this.errors[controlErrorKey] : (this.defaultErrorTexts[controlErrorKey]) ? this.defaultErrorTexts[controlErrorKey] : controlErrorKey
           }
         }
